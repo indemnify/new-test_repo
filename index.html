@@ -20,7 +20,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1 {
+        h1, h2 {
             color: #3a5a40;
             text-align: center;
         }
@@ -34,14 +34,92 @@
             border-radius: 5px;
             margin: 10px 0;
         }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fefae0;
+            border-radius: 8px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .gallery-placeholder {
+            background-color: #dad7cd;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        .contact-form {
+            display: grid;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #a3b18a;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        button {
+            background-color: #3a5a40;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #344e41;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Nature Page</h1>
         <p>This is a simple webpage with earth tones and natural colors.</p>
-        <div class="highlight">
-            <p>Nature is beautiful and inspiring. The colors on this page reflect the natural world around us.</p>
+        
+        <div class="section">
+            <h2>Local Wildlife</h2>
+            <p>Our area is home to diverse wildlife including:</p>
+            <ul>
+                <li>Various species of birds</li>
+                <li>Small mammals like rabbits and squirrels</li>
+                <li>Beautiful butterflies and insects</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Seasonal Changes</h2>
+            <p>Experience the beauty of nature throughout the year:</p>
+            <div class="highlight">
+                <p><strong>Spring:</strong> Blooming flowers and returning birds</p>
+                <p><strong>Summer:</strong> Lush green forests and warm sunny days</p>
+                <p><strong>Fall:</strong> Colorful foliage and migrating birds</p>
+                <p><strong>Winter:</strong> Snow-covered landscapes and winter wildlife</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-placeholder">Photo 1</div>
+                <div class="gallery-placeholder">Photo 2</div>
+                <div class="gallery-placeholder">Photo 3</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
 </body>
